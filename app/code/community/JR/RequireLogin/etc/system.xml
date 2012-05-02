@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<config>
+    <sections>
+        <customer translate="label" module="customer">
+            <groups>
+                <startup translate="label">
+                    <fields>
+                        <require_login translate="label comment">
+                            <label>Require Login</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </require_login>
+                        <require_login_whitelist>
+                            <label>Require Login Whitelist</label>
+                            <frontend_type>text</frontend_type>
+                            <comment><![CDATA[Regular expression that is used to match request strings that do not need customer authentication.]]></comment>
+                            <sort_order>11</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <require_login>1</require_login>
+                            </depends>
+                        </require_login_whitelist>
+                    </fields>
+                </startup>
+            </groups>
+        </customer>
+    </sections>
+</config>

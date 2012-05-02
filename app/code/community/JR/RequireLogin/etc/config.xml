@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+    <modules>
+        <JR_RequireLogin>
+            <version>0.1.0</version>
+        </JR_RequireLogin>
+    </modules>
+    <global>
+        <models>
+            <jr_requirelogin>
+                <class>JR_RequireLogin_Model</class>
+            </jr_requirelogin>
+        </models>
+        <helpers>
+            <jr_requirelogin>
+                <class>JR_RequireLogin_Helper</class>
+            </jr_requirelogin>
+        </helpers>
+    </global>
+    <frontend>
+        <events>
+            <controller_action_predispatch>
+                <observers>
+                    <jr_require_login>
+                        <class>JR_RequireLogin_Model_Customer_Observer</class>
+                        <method>requireLogin</method>
+                    </jr_require_login>
+                </observers>
+            </controller_action_predispatch>
+        </events>
+    </frontend>
+    <default>
+        <customer>
+            <startup>
+                <require_login>0</require_login>
+                <require_login_whitelist><![CDATA[#(customer\/account\/(log(in|out)|forgotpassword|resetpassword|create))#]]></require_login_whitelist>
+            </startup>
+        </customer>
+    </default>
+</config>
