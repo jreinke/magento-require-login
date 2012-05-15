@@ -1,1 +1,1 @@
-![Magento Require Login](http://i.imgur.com/TCRP1.png)
+![Magento Require Login](http://i.imgur.com/rqpRf.png)
