@@ -1,0 +1,8 @@
+"Login Options","Options de connexion"
+"Require Login","Forcer l'authentification"
+"Require Login Whitelist","URLs publiques"
+"Regular expression that is used to match request strings that do not need customer authentication.","Expression régulière utilisée pour définir les URLs ne nécessitant pas d'authentification."
+"Full overview available","Aperçu complet disponible"
+"here","ici"
+"Bubble RequireLogin is a module that can force user authentication in frontend.","Bubble RequireLogin est un module permettant de forcer l'authentification des utilisateurs sur le front."
+"http://bubbleco.de/en/2012/05/15/a-magento-module-to-require-login-on-your-store/","http://bubbleco.de/2012/05/15/un-module-pour-forcer-l-authentification-sur-votre-site-magento/"

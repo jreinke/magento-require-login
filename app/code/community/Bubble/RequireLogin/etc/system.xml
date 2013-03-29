@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<config>
+    <tabs>
+        <bubble translate="label">
+            <label>Bubble Code</label>
+            <sort_order>1000</sort_order>
+        </bubble>
+    </tabs>
+    <sections>
+        <bubble_requirelogin translate="label" module="bubble_requirelogin">
+            <label>Bubble RequireLogin</label>
+            <tab>bubble</tab>
+            <sort_order>500</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <hint>
+                    <frontend_model>bubble_requirelogin/adminhtml_system_config_fieldset_hint</frontend_model>
+                    <sort_order>0</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                </hint>
+                <startup translate="label">
+                    <label>Login Options</label>
+                    <sort_order>300</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <require_login translate="label comment">
+                            <label>Require Login</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </require_login>
+                        <require_login_whitelist translate="label comment">
+                            <label>Require Login Whitelist</label>
+                            <frontend_type>text</frontend_type>
+                            <comment><![CDATA[Regular expression that is used to match request strings that do not need customer authentication.]]></comment>
+                            <sort_order>11</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <require_login>1</require_login>
+                            </depends>
+                        </require_login_whitelist>
+                    </fields>
+                </startup>
+            </groups>
+        </bubble_requirelogin>
+    </sections>
+</config>
