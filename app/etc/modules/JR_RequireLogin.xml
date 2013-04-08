@@ -1,9 +1,0 @@
-<?xml version="1.0"?>
-<config>
-    <modules>
-        <JR_RequireLogin>
-            <active>true</active>
-            <codePool>community</codePool>
-        </JR_RequireLogin>
-    </modules>
-</config>
