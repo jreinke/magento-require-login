@@ -2,26 +2,19 @@
 <config>
     <tabs>
         <bubble translate="label">
-            <label><![CDATA[<div><img src="http://i.imgur.com/nkD1M9R.png" alt="BubbleCode" title="BubbleCode" width="108" height="23" style="display:block;" /></div>]]></label>
+            <label>Bubble Extensions</label>
             <sort_order>1000</sort_order>
         </bubble>
     </tabs>
     <sections>
         <bubble_requirelogin translate="label" module="bubble_requirelogin">
-            <label>Bubble RequireLogin</label>
+            <label>Require Login</label>
             <tab>bubble</tab>
             <sort_order>500</sort_order>
             <show_in_default>1</show_in_default>
             <show_in_website>1</show_in_website>
             <show_in_store>1</show_in_store>
             <groups>
-                <hint>
-                    <frontend_model>bubble_requirelogin/adminhtml_system_config_fieldset_hint</frontend_model>
-                    <sort_order>0</sort_order>
-                    <show_in_default>1</show_in_default>
-                    <show_in_website>1</show_in_website>
-                    <show_in_store>1</show_in_store>
-                </hint>
                 <startup translate="label">
                     <label>Login Options</label>
                     <sort_order>300</sort_order>

@@ -1,5 +1,10 @@
 <?php
-
+/**
+ * @category    Bubble
+ * @package     Bubble_RequireLogin
+ * @version     1.0.0
+ * @copyright   Copyright (c) 2014 BubbleShop (https://www.bubbleshop.net)
+ */
 class Bubble_RequireLogin_Model_Customer_Observer
 {
     public function requireLogin($observer)
