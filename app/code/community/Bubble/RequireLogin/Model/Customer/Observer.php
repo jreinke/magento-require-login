@@ -18,7 +18,13 @@ class Bubble_RequireLogin_Model_Customer_Observer
             $requestString = $controllerAction->getRequest()->getRequestString();
 
             if (!preg_match($helper->getWhitelist(), $requestString)) {
-                $session->setBeforeAuthUrl(Mage::helper('core/url')->getCurrentUrl());
+                // If logging in from the homepage, the only way back is using the Magento internal homepage path. Magento ignores a setBeforeAuthUrl with the site base URL
+                if (Mage::helper('core/url')->getCurrentUrl() == Mage::getBaseUrl()) {
+                    $session->setBeforeAuthUrl(Mage::getUrl('*/*/*', array('_current' => true)));
+                } else {
+                    $session->setBeforeAuthUrl(Mage::helper('core/url')->getCurrentUrl());
+                }
+
                 $controllerAction->getResponse()->setRedirect(Mage::getUrl('customer/account/login'));
                 $controllerAction->getResponse()->sendResponse();
                 exit;
