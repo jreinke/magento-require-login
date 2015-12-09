@@ -49,7 +49,7 @@
         <bubble_requirelogin>
             <startup>
                 <require_login>0</require_login>
-                <require_login_whitelist><![CDATA[#customer\/account\/(log(in|out)|forgotpassword|resetpassword|create)|paypal\/ipn#]]></require_login_whitelist>
+                <require_login_whitelist><![CDATA[#customer\/account\/(log(in|out)|forgotpassword|resetpassword|create|confirm)|paypal\/ipn#]]></require_login_whitelist>
             </startup>
         </bubble_requirelogin>
     </default>
